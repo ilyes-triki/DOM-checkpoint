@@ -7,7 +7,7 @@ let card = Array.from(document.getElementsByClassName("card"));
 let quan = Array.from (document.getElementsByClassName("qte"))
 let price = document.querySelectorAll(".price")
 let priceUn = Array.from(document.getElementsByClassName("priceUn"))
-
+let total = document.getElementById("totale")
 
 
 for (let i = 0; i < btnp.length; i++) {
@@ -30,7 +30,7 @@ for (let i = 0; i < btnm.length; i++) {
 for (let i = 0; i < del.length; i++) {
   del[i].addEventListener("click", () => {
     card[i].remove(card);
-    totale()
+    total.innerHTML = total.innerHTML - price[i].innerHTML
   });
 }
 for (let i = 0; i < like.length; i++) {
